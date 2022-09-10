@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block title %}Add New Employee{% endblock %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'allemp.css' %}">{% endblock %}
+
+{% block body %} 
+<h2>All Employee Detail</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Role</th>
+            <th>Salary</th>
+            <th>Bonus</th>
+            <th>Phone</th>
+            <th>Hire Date</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for x in emps %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.first_name}}</td>
+            <td>{{x.last_name}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.dept.name}}</td>
+            <td>{{x.role.name}}</td>
+            <td>{{x.salary}}</td>
+            <td>{{x.bonus}}</td>
+            <td>{{x.phone}}</td>
+            <td>{{x.hire_date}}</td>
+
+        </tr>
+            {% endfor %}
+        <tbody>
+    </table>
+</div>
+{% endblock %}

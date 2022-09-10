@@ -1,0 +1,18 @@
+.left
+{
+    height: 500px;
+    width: 500px;
+    background-color: bisque;
+    
+   
+}
+.right
+{
+    
+    border-left: 3p solid black;
+    height: auto;
+    width: auto;
+    position: relative;
+    top: 100px;
+   
+}

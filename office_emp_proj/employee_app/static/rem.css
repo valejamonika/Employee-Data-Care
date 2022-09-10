@@ -1,0 +1,33 @@
+body{
+    background:#b4b4b4;
+  }
+  
+  #registration-form {
+    font-family:'Open Sans Condensed', sans-serif;
+      width: 400px;
+      min-width:250px;
+      margin: 30px auto;
+      position: relative;
+  }
+  
+  #registration-form .fieldset {
+      background-color:#d5d5d5;
+      padding-bottom: 30px;
+      border-radius: 3px;
+    
+  }
+
+   #registration-form legend {
+      text-align: center;
+      background: #364351;
+      width: 100%;
+      padding: 30px 0;
+      border-radius: 3px 3px 0 0;
+      color: white;
+      font-size:2em;
+  }
+  .row .dropdown
+  {
+    margin: 10px 37px;
+    
+  }

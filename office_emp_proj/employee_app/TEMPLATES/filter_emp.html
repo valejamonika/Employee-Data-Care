@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block title %}Add New Employee{% endblock %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'filter.css' %}">{% endblock %}
+{% block js %}<script src="{% static 'add.js' %}"></script> {% endblock %}
+{% block body %} 
+<p style="font-size: 30px;text-align:center;color: rgb(33, 33, 54);">{{msg}}</p>
+<div id="registration-form">
+	<div class='fieldset'>
+    <legend>Filter Employee</legend>
+		<form action="filter_emp" method="post" data-validate="parsley">
+			{% csrf_token %}
+			<div class='row'>
+				<label for='firstname'>Employee Name</label>
+				<input type="text" placeholder="Employee Name" name='empname' id='empname'>
+			</div>
+            <div class='row'>
+				<label for='firstname'>Department</label>
+				<input type="text" placeholder="Department Name" name='deptname' id='deptname'>
+			</div>
+            <div class='row'>
+				<label for='firstname'>Role</label>
+				<input type="text" placeholder="Role" name='role' id='emprole'>
+			</div>
+            <input type="submit"/>
+            </form>
+    </div>
+</div>
+{% endblock %}

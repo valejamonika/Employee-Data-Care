@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% block title %}Add New Employee{% endblock %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'add.css' %}">{% endblock %}
+{% block js %}<script src="{% static 'add.js' %}"></script> {% endblock %}
+{% block body %} 
+<p style="font-size: 30px;text-align:center;color: rgb(33, 33, 54);">{{msg}}</p>
+<div id="registration-form">
+	<div class='fieldset'>
+    <legend>Add New Employee</legend>
+		<form action="add" method="post" data-validate="parsley">
+			{% csrf_token %}
+			<div class='row'>
+				<label for='firstname'>First Name</label>
+				<input type="text" placeholder="First Name" name='firstname' id='firstname' data-required="true" data-error-message="Your First Name is required">
+			</div>
+            <div class='row'>
+				<label for='lastname'>Last Name</label>
+				<input type="text" placeholder="Last Name" name='lastname' id='last name' data-required="true" data-error-message="Your First Name is required">
+			</div>
+			<div class='row'>
+				<label for="email">E-mail</label>
+				<input type="text" placeholder="E-mail"  name='email' id='email' data-required="true" data-required="true" data-error-message="Your E-mail is required">
+			</div>
+			<div class='row'>
+				<label for="dept">Department</label>
+				<input type="text" placeholder="Department"  name='dept' id='dept' data-required="true" data-error-message="Employee Department is required">
+			</div>
+			<div class='row'>
+				<label for="salary">Salary</label>
+				<input type="text" placeholder="Salary"  name='salary' id='salary' data-required="true" data-error-message="Employee Salary is required">
+			</div>
+			<div class='row'>
+				<label for="bonus">Bonus</label>
+				<input type="text" placeholder="Bonus"  name='bonus' id='bonus' data-required="true" data-error-message="Employee Bonus is required">
+			</div>
+			<div class='row'>
+				<label for="role">Role</label>
+				<input type="text" placeholder="Role"  name='role' id='role'  data-required="true" data-error-message="Employee Salary is required">
+			</div>
+			<div class='row'>
+				<label for="salary">Contact No.</label>
+				<input type="text" placeholder="phone"  name='phone' id='phone'  data-required="true" data-error-message="Employee Salary is required">
+			</div>
+			<div class='row'>
+				<label for="hire date">Hire Date</label>
+				<input type="date" placeholder="Select Hire Date"  name='hire date' id='hdate' data-required="true" data-error-message="Hiring Date is required">
+			</div>
+			<input type="submit" value="Add Employee">
+		</form>
+	</div>
+</div>
+{% endblock %}

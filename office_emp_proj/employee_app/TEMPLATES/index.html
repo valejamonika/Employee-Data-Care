@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'first.css' %}">
+    {% block css %} {% endblock %}
+    {% block js %} {% endblock %}
+</head>
+<body>
+    <header id="header">
+        <nav class="links" style="--items: 6;">
+            <a id="abc" href="add_emp">New Employee</a>
+            <a id="abc" href="all_emp">List Employee</a>
+            <a id="abc" href="filter_emp">Filter Employee</a>
+            <a id="abc" href="rem_emp">Remove Employee</a>
+            <a id="abc" href="dept">Department</a>
+            <a id="abc" href="role">Role</a>
+            <span class="line"></span>
+        </nav>
+    </header>
+    
+    
+    {% block body %} 
+    {% endblock %}
+    <div class="footer">Developer @ Monika
+    </div>
+</body>
+</html>
